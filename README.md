@@ -1,5 +1,5 @@
 # complete-elasticsearch-masterclass-with-kibana-and-logstash
-![complete-elasticsearch-masterclass-with-kibana-and-logstash](./Screenshot1/Screenshot3.png?raw=true "complete-elasticsearch-masterclass-with-kibana-and-logstash")
+![complete-elasticsearch-masterclass-with-kibana-and-logstash](./Screenshot1/Screenshot1.png?raw=true "complete-elasticsearch-masterclass-with-kibana-and-logstash")
 
 ## Description 
 
