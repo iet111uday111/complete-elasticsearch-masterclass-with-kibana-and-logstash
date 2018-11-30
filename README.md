@@ -96,3 +96,9 @@ Various Wikimedia applications send log events to Logstash, which gathers the me
 
 #### Index Structure
 ![Screenshot](./Screenshots/Screenshot21.png?raw=true "Screenshot")
+
+#### Data Type for Document Fields
+![Screenshot](./Screenshots/Screenshot22.png?raw=true "Screenshot")
+
+#### Search DSL components
+![Screenshot](./Screenshots/Screenshot23.png?raw=true "Screenshot")
