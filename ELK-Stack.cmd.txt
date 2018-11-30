@@ -151,4 +151,75 @@ GET business
 It contain Setting and Mapping.
 
 Mapping : It contains what field, what kind of data are available in this index.
-Setting : It contains all setting related details i.e. creation date, number of shards, number of replicas
+Setting : It contains all setting related details of the index i.e. creation date, number of shards, number of replicas... etc
+
+18. Term Query
+
+GET {{INDEX_NAME}}/_search 
+{
+  "query": {
+    "term": {
+      "FIELDNAME": {
+        "value": "VALUE"
+      }
+    }
+  }
+}
+
+example: 
+
+GET employees/_search 
+{
+  "query": {
+    "term": {
+      "name": {
+        "value": "honor"
+      }
+    }
+  }
+}
+
+It gives response with hits object with hits array.
+
+e.g...
+{
+  "took" : 1,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 1,
+    "max_score" : 0.2876821,
+    "hits" : [
+      {
+        "_index" : "business",
+        "_type" : "building",
+        "_id" : "217",
+        "_score" : 0.2876821,
+        "_source" : {
+          "address" : "11 Pen Ave",
+          "floors" : 5,
+          "offices" : 7,
+          "loc" : {
+            "lat" : 40.693479,
+            "lon" : -73.983854
+          }
+        }
+      }
+    ]
+  }
+}
+
+==> ElasticSearch Index is logical representation of Data.
+==> Shards are physical container of data.
+==> Shards contains multiple number of segements. 
+==> Shard is set of multiple Inverted Indexes.
+
+Indexes = set of shards
+Shards = set of container 
+Segements = set of Inverted Indexes
+

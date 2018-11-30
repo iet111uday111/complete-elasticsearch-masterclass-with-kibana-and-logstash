@@ -65,4 +65,34 @@ Various Wikimedia applications send log events to Logstash, which gathers the me
 ![Screenshot](./Screenshots/Screenshot10.png?raw=true "Screenshot")
 
 #### Schema of an index
-![Screenshot](./Screenshots/Screenshot10.png?raw=true "Screenshot")
+![Screenshot](./Screenshots/Screenshot11.png?raw=true "Screenshot")
+
+#### Logical representation of shards and Replica
+![Screenshot](./Screenshots/Screenshot12.png?raw=true "Screenshot")
+
+#### Index Request (clustering with primary and Replica)
+![Screenshot](./Screenshots/Screenshot13.png?raw=true "Screenshot")
+
+#### Delete Request(same as Indexing request)
+![Screenshot](./Screenshots/Screenshot14.png?raw=true "Screenshot")
+
+#### Get Request( Use round robin requesting to node)
+![Screenshot](./Screenshots/Screenshot15.png?raw=true "Screenshot")
+
+#### Shards
+![Screenshot](./Screenshots/Screenshot16.png?raw=true "Screenshot")
+
+#### Complete Process of making data searchable
+![Screenshot](./Screenshots/Screenshot17.png?raw=true "Screenshot")
+
+#### Text Analysis
+![Screenshot](./Screenshots/Screenshot18.png?raw=true "Screenshot")
+
+#### Text Analysis2
+![Screenshot](./Screenshots/Screenshot19.png?raw=true "Screenshot")
+
+#### After Text Analysis
+![Screenshot](./Screenshots/Screenshot20.png?raw=true "Screenshot")
+
+#### Index Structure
+![Screenshot](./Screenshots/Screenshot21.png?raw=true "Screenshot")
