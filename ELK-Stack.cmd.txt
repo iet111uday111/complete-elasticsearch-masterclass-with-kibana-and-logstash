@@ -1,8 +1,154 @@
 1. ELastic Search
 curl http://localhost:9200
+
 2. Kibana
 curl http://localhost:5601
+
 3. ps auwx | grep kibana
+
 4.sudo -i service kibana start
+
 5.sudo -i service kibana stop
-6.
+
+6.Show all index's of elasticsearch db :
+
+http://localhost:9200/_cat/indices?v
+
+ex:
+
+health status index     uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   products  jyHas1avRBqnMY71aG5ETQ   5   1          4            0     20.2kb         20.2kb
+yellow open   books     ot2dmkE5TxGYbfL8mdqODA   5   1          1            0      5.1kb          5.1kb
+green  open   .kibana_1 kkB9tsVATuqHYDH8p6HJhQ   1   0          2            0      8.6kb          8.6kb
+
+7. Show all data from one index
+http://localhost:9200/products/_search
+
+8. Search a query in a index
+
+http://localhost:9200/products/_search?q=Incredible
+
+9. Update a document from Kibana
+PUT products/_doc/MWekT2cBa3Fz-WQcq3Cy
+{
+            "image" : "http://lorempixel.com/640/480/abstract",
+          "price" : 544,
+          "name" : "Fantastic Rubber"
+}
+
+8. Get all document from all index in Kibana
+
+GET /_search
+{
+    "query": {
+        "match_all": {}
+    }
+}
+
+9. Get all doocuments from a index in kibana
+
+GET products/_search
+{
+    "query": {
+        "match_all": {}
+    }
+}
+
+10. Get One Document from index in Kibana
+
+GET products/doc/MWekT2cBa3Fz-WQcq3Cy
+
+11. If we don't want meta field in JSON Response.
+
+GET products/doc/MWekT2cBa3Fz-WQcq3Cy/_source
+
+12. Check only a document exists or Not
+
+HEAD products/doc/MWekT2cBa3Fz-WQcq3Cy
+
+13. Update a particular fields
+
+POST products/doc/MWekT2cBa3Fz-WQcq3Cy/_update
+{
+      "doc": {
+                "price" : 54,
+                "name" : "Fantastic price"
+      }
+}
+
+14. Add a field to the existiting document
+
+POST products/doc/MWekT2cBa3Fz-WQcq3Cy/_update
+{
+      "doc": {
+            "newField" : 'Test'
+      }
+}
+
+15. Delete a Document
+
+DELETE products/doc/MWekT2cBa3Fz-WQcq3Cy
+{
+      "doc": {
+            "newField" : 'Test'
+      }
+}
+
+16. Get the structure of a index(business) 
+
+GET business
+
+17. Structure of an index 
+{
+  "business" : {
+    "aliases" : { },
+    "mappings" : {
+      "building" : {
+        "properties" : {
+          "address" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "floors" : {
+            "type" : "long"
+          },
+          "loc" : {
+            "properties" : {
+              "lat" : {
+                "type" : "float"
+              },
+              "lon" : {
+                "type" : "float"
+              }
+            }
+          },
+          "offices" : {
+            "type" : "long"
+          }
+        }
+      }
+    },
+    "settings" : {
+      "index" : {
+        "creation_date" : "1543560290838",
+        "number_of_shards" : "5",
+        "number_of_replicas" : "1",
+        "uuid" : "eoDCR7kQRFWCTnSBtnR9vA",
+        "version" : {
+          "created" : "6050199"
+        },
+        "provided_name" : "business"
+      }
+    }
+  }
+}
+
+It contain Setting and Mapping.
+
+Mapping : It contains what field, what kind of data are available in this index.
+Setting : It contains all setting related details i.e. creation date, number of shards, number of replicas

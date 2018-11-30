@@ -52,3 +52,17 @@ Various Wikimedia applications send log events to Logstash, which gathers the me
 #### Elasticsearch Keywords
 ![Screenshot](./Screenshots/Screenshot6.png?raw=true "Screenshot")
 
+#### Insertion === indexing
+![Screenshot](./Screenshots/Screenshot7.png?raw=true "Screenshot")
+
+#### Syntax for indexing a document
+![Screenshot](./Screenshots/Screenshot8.png?raw=true "Screenshot")
+
+#### Documents are immutable
+![Screenshot](./Screenshots/Screenshot9.png?raw=true "Screenshot")
+
+#### Structure of an index
+![Screenshot](./Screenshots/Screenshot10.png?raw=true "Screenshot")
+
+#### Schema of an index
+![Screenshot](./Screenshots/Screenshot10.png?raw=true "Screenshot")
