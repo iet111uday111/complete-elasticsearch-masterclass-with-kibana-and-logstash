@@ -39,3 +39,16 @@ Various Wikimedia applications send log events to Logstash, which gathers the me
 
 #### ElasticSearch
 ![Screenshot](./Screenshots/Screenshot2.png?raw=true "Screenshot")
+
+#### Inverted Index
+![Screenshot](./Screenshots/Screenshot3.png?raw=true "Screenshot")
+
+#### ElasticSearch is Document Oriented
+![Screenshot](./Screenshots/Screenshot4.png?raw=true "Screenshot")
+
+#### How ElasticSearch is related to a database
+![Screenshot](./Screenshots/Screenshot5.png?raw=true "Screenshot")
+
+#### Elasticsearch Keywords
+![Screenshot](./Screenshots/Screenshot6.png?raw=true "Screenshot")
+

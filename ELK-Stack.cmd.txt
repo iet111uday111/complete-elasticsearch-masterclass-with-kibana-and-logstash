@@ -1,0 +1,8 @@
+1. ELastic Search
+curl http://localhost:9200
+2. Kibana
+curl http://localhost:5601
+3. ps auwx | grep kibana
+4.sudo -i service kibana start
+5.sudo -i service kibana stop
+6.
