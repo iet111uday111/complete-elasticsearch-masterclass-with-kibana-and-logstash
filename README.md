@@ -102,3 +102,9 @@ Various Wikimedia applications send log events to Logstash, which gathers the me
 
 #### Search DSL components
 ![Screenshot](./Screenshots/Screenshot23.png?raw=true "Screenshot")
+
+#### ELK Stack 
+![Screenshot](./Screenshots/Screenshot24.png?raw=true "Screenshot")
+
+#### Logstash
+![Screenshot](./Screenshots/Screenshot25.png?raw=true "Screenshot")
